@@ -1,3 +1,13 @@
+/*
+ * File: multi-lookup.h
+ * Author: Vincent Mahathirash
+ * Project: CSCI 3753 Programming Assignment 3
+ * Create Date: 2016/10/12
+ * Description:
+ * 	This file contains declarations of main functions for
+ *  Programming Assignment 3.
+ */
+
 #ifndef MULTI_LOOKUP_H
 #define MULTI_LOOKUP_H
 

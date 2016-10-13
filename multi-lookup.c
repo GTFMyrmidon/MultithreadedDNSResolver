@@ -1,3 +1,13 @@
+/*
+ * File: multi-lookup.c
+ * Author: Vincent Mahathirash
+ * Project: CSCI 3753 Programming Assignment 3
+ * Create Date: 2016/10/12
+ * Description:
+ * 	This file contains implementations of main functions for
+ *  Programming Assignment 3.
+ */
+
 #include <pthread.h>
 #include <unistd.h>
 
