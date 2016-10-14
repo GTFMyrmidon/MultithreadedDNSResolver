@@ -1,0 +1,21 @@
+Vincent Mahathirash
+CSCI 3753 - Programming Assignment 3
+October 14, 2016
+
+Included in this zip:
+Source Files: multi-lookup.c, multi-lookup.h
+Makefile
+input Folder: Folder containing text files with hostnames to be resolved.
+
+To Build:
+  make
+  Will generate an executable named "multi-lookup".
+
+To Clean:
+  make clean
+
+To Run:
+  ./multi-lookup input/*.txt results.txt
+
+Check for memory leaks:
+  valgrind --leak-check=full ./multi-lookup input/*.txt results.txt
