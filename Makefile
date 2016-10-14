@@ -22,4 +22,4 @@ clean:
 	rm -f multi-lookup
 	rm -f *.o
 	rm -f *~
-	rm -f results.txt output.txt
+	rm -f results.txt
