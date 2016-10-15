@@ -99,7 +99,7 @@ void* Consumer(void* outputFile)
 
     if (resolved)
     {
-      if (allIPAddresses) // Finds all IP addresses + Ipv6 addresses
+      if (allIPAddresses) // Finds all IP addresses + IPv6 addresses
       {
         queue ipList; // Holds all IP addresses
         queue_init(&ipList, 50);
@@ -158,14 +158,6 @@ int main(int argc, char* argv[])
     return EXIT_FAILURE;
   }
 
-  if ((argc - 2) > MAX_INPUT_FILES)
-  {
-    fprintf(stderr, "Too many files: %d\n", (argc - 2));
-    fprintf(stderr, "Usage: %s %s\n", argv[0], USAGE);
-
-    return EXIT_FAILURE;
-  }
-
   // Open output file
   FILE* outputFP = fopen(argv[argc - 1], "w");
   if (!outputFP)
@@ -177,7 +169,7 @@ int main(int argc, char* argv[])
   int ret; // Get return status of pthread_create
   long i; // Loop Counter
   int numCores = sysconf(_SC_NPROCESSORS_ONLN); // Number of processor cores
-  int numResThreads = numCores >= MIN_RESOLVER_THREADS ? numCores : MIN_RESOLVER_THREADS; // Number of resolver threads
+  int numResThreads = numCores >= MIN_RESOLVER_THREADS ? numCores : MAX_RESOLVER_THREADS; // Number of resolver threads
   int numReqThreads = argc - 2; // Number of request threads
 
   // Initialize mutexes
